@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="umeng-colllogs-web" />
         <module name="umeng-genlogs" />
         <module name="umeng-log-common" />
+        <module name="umeng-log-export" />
+        <module name="umeng-log-hive" />
         <module name="umeng-log-phone" />
       </profile>
     </annotationProcessing>
@@ -16,7 +17,10 @@
       <module name="umeng-colllogs-web" target="1.5" />
       <module name="umeng-genlogs" target="1.5" />
       <module name="umeng-log-common" target="1.5" />
+      <module name="umeng-log-export" target="1.5" />
+      <module name="umeng-log-hive" target="1.5" />
       <module name="umeng-log-phone" target="1.5" />
+      <module name="umeng-log-spark" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,9 +1,11 @@
 package com.it18zhang.umeng.common;
 
+import java.io.Serializable;
+
 /**
  * 日志基础类
  */
-public abstract class AppBaseLog {
+public abstract class AppBaseLog implements Serializable {
 	public static final String LOGTYPE_ERROR = "error";
 	public static final String LOGTYPE_EVENT = "event";
 	public static final String LOGTYPE_PAGE = "page";

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/umeng-colllogs-web" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/umeng-genlogs/pom.xml" />
-        <option value="$PROJECT_DIR$/umeng-colllogs-web/pom.xml" />
         <option value="$PROJECT_DIR$/umeng-log-phone/pom.xml" />
         <option value="$PROJECT_DIR$/umeng-log-common/pom.xml" />
+        <option value="$PROJECT_DIR$/umeng-log-hive/pom.xml" />
+        <option value="$PROJECT_DIR$/umeng-log-export/pom.xml" />
       </list>
     </option>
   </component>

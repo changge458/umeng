@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="umeng-colllogs-web:war">
+    <output-path>$PROJECT_DIR$/umeng-colllogs-web/target</output-path>
+    <root id="archive" name="umeng-colllogs-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="umeng-colllogs-web:war exploded" />
+    </root>
+  </artifact>
+</component>
