@@ -12,14 +12,16 @@ import java.util.Map;
 public class GeoliteUtil {
 
     //
-    private static Reader reader ;
+    public static Reader reader ;
 
     //
-    private static Map<String,String> cache = new HashMap<String, String>() ;
+    public static Map<String,String> cache = new HashMap<String, String>() ;
 
     static{
         try {
-            InputStream in = GeoliteUtil.class.getResourceAsStream("GeoLite2-City.mmdb");
+            //InputStream in = ClassLoader.getSystemResourceAsStream("GeoLite2-City.mmdb");
+            InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("GeoLite2-City.mmdb");
+            // InputStream in = GeoliteUtil.class.getResourceAsStream("/GeoLite2-City.mmdb");
             reader = new Reader(in);
         } catch (Exception e) {
             e.printStackTrace();
@@ -42,7 +44,8 @@ public class GeoliteUtil {
                     try {
                         prov = node.get("subdivisions").get(0).get("names").get("zh-CN").textValue();
 
-                    } catch (Exception e) {
+                    }
+                    catch (Exception e) {
                     }
                 }
                 cache.put(ip, country + "," + prov);

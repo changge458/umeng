@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import static com.it18zhang.logudf.AggLogParseUDTF.fieldsCopy;
+
 public class TestDateUtil {
 
     public static void main(String[] args) throws Exception{
@@ -21,5 +23,10 @@ public class TestDateUtil {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MMM/yyyy:HH:mm:ss z", Locale.US);
         Date date1 = sdf.parse(date);
         System.out.println(date1.getTime());
+    }
+    
+    @Test
+    public void testReflect(){
+        System.out.println(fieldsCopy().toString());
     }
 }
