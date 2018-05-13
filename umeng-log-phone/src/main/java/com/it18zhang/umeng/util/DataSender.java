@@ -12,12 +12,13 @@ import static com.it18zhang.umeng.util.GenLogUtil.*;
 public class DataSender {
 
     public static void main(String[] args) throws Exception {
-        for (int i = 0; i <5; i++) {
+        for ( ;;) {
             AppLogAggEntity aggLog = genLogAgg();
             String json = JSON.toJSONString(aggLog,false);
             doSend(json);
             System.out.println(json);
-            Thread.sleep(5000);
+            //Thread.sleep(3000);
+
         }
     }
 

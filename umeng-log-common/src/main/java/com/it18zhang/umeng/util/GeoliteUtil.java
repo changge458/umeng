@@ -43,7 +43,6 @@ public class GeoliteUtil {
                     }
                     try {
                         prov = node.get("subdivisions").get(0).get("names").get("zh-CN").textValue();
-
                     }
                     catch (Exception e) {
                     }

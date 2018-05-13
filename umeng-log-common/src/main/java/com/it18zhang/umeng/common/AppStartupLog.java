@@ -8,11 +8,11 @@ public class AppStartupLog extends AppBaseLog {
     private String province;                //省份，终端不用上报，服务器自动填充该属性
     private String ipAddress;               //ip地址
 
-    private String network;                //网络
-    private String carrier;                //运营商
+    private String network;                 //网络
+    private String carrier;                 //运营商
 
-    private String brand;               //品牌
-    private String screenSize;          //分辨率
+    private String brand;                   //品牌
+    private String screenSize;              //分辨率
 
     public AppStartupLog() {
         setLogType(LOGTYPE_STARTUP);

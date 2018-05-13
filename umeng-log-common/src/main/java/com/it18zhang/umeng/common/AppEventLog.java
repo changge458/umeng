@@ -10,8 +10,8 @@ public class AppEventLog extends AppBaseLog {
 
 	private static final long serialVersionUID = 1L;
 
-	private String eventId;			//事件唯一标识
-	private Long eventDurationSecs;	//事件持续时长
+	private String eventId;								//事件唯一标识
+	private Long eventDurationSecs;						//事件持续时长
 	private Map<String,String> paramKeyValueMap;		//参数名/值对
 
 	public AppEventLog() {
