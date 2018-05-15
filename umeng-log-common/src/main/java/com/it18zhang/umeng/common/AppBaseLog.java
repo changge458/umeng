@@ -14,7 +14,7 @@ public abstract class AppBaseLog implements Serializable {
 
 	private String logType;				//日志类型
 	private Long createdAtMs;           //日志创建时间
-	private String appId;               //应用唯一标识
+	//private String appId;               //应用唯一标识
 	private String tenantId;            //租户唯一标识,企业用户
 	private String deviceId;            //设备唯一标识
 	private String appVersion;          //版本
@@ -39,13 +39,13 @@ public abstract class AppBaseLog implements Serializable {
 		this.createdAtMs = createdAtMs;
 	}
 
-	public String getAppId() {
-		return appId;
-	}
-
-	public void setAppId(String appId) {
-		this.appId = appId;
-	}
+//	public String getAppId() {
+//		return appId;
+//	}
+//
+//	public void setAppId(String appId) {
+//		this.appId = appId;
+//	}
 
 	public String getTenantId() {
 		return tenantId;

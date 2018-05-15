@@ -25,7 +25,7 @@ import static com.it18zhang.umeng.util.LogUtil.fieldsCopy;
  * 日志聚合体解析表生成函数
  */
 @Description(name = "parseUsage",
-        value = "select parseUsage(line) ===> server_time, remote_ip, client_time, appid, tenantid, deviceid, appversion, appchannel, appplatform, ostype, devicestyle, singleUseDurationSecs, singleUploadTraffic, singleDownloadTraffic\t")
+        value = "select parseUsage(line) ===> server_time, remote_ip, client_time, tenantid, deviceid, appversion, appchannel, appplatform, ostype, devicestyle, singleUseDurationSecs, singleUploadTraffic, singleDownloadTraffic\t")
 
 public class ParseUsageUDTF extends GenericUDTF {
 

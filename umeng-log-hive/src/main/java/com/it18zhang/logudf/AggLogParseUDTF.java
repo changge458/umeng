@@ -19,8 +19,8 @@ import java.util.List;
  * 日志聚合体解析表生成函数
  */
 @Description(name = "parseAgg",
-        value = "select parseAgg(line) ===> server_time, remote_ip, client_time, appid, tenantid, deviceid, appversion, appchannel, appplatform, ostype, devicestyle\t" +
-                "select parseAgg(line,1) ===> server_time, remote_ip, client_time, appid, tenantid, deviceid, appversion, appchannel, appplatform, ostype, devicestyle, json\t",
+        value = "select parseAgg(line) ===> server_time, remote_ip, client_time, tenantid, deviceid, appversion, appchannel, appplatform, ostype, devicestyle\t" +
+                "select parseAgg(line,1) ===> server_time, remote_ip, client_time, tenantid, deviceid, appversion, appchannel, appplatform, ostype, devicestyle, json\t",
         extended = "the 2nd can be not exist. if it exists, it must be one of 1,2,3,4,5")
 
 public class AggLogParseUDTF extends GenericUDTF {

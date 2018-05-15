@@ -4,40 +4,31 @@ import java.util.Map;
 
 /**
  * 应用上报的事件相关信息
- *
  */
 public class AppEventLog extends AppBaseLog {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String eventId;								//事件唯一标识
-	private Long eventDurationSecs;						//事件持续时长
-	private Map<String,String> paramKeyValueMap;		//参数名/值对
+    private String eventId;                                //事件唯一标识
+    private String productId;        //购买商品
 
-	public AppEventLog() {
-		setLogType(LOGTYPE_EVENT);
-	}
-	public String getEventId() {
-		return eventId;
-	}
+    public AppEventLog() {
+        setLogType(LOGTYPE_EVENT);
+    }
 
-	public void setEventId(String eventId) {
-		this.eventId = eventId;
-	}
+    public String getEventId() {
+        return eventId;
+    }
 
-	public Long getEventDurationSecs() {
-		return eventDurationSecs;
-	}
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
+    }
 
-	public void setEventDurationSecs(Long eventDurationSecs) {
-		this.eventDurationSecs = eventDurationSecs;
-	}
+    public String getProductId() {
+        return productId;
+    }
 
-	public Map<String, String> getParamKeyValueMap() {
-		return paramKeyValueMap;
-	}
-
-	public void setParamKeyValueMap(Map<String, String> paramKeyValueMap) {
-		this.paramKeyValueMap = paramKeyValueMap;
-	}
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
 }

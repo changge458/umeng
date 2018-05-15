@@ -36,6 +36,29 @@ public class GenLogUtil {
             if (t1 instanceof AppBaseLog) {
                 ((AppBaseLog) t1).setCreatedAtMs(System.currentTimeMillis());
             }
+
+            //如果t1是base的实例，则设置商品id
+            if(t1 instanceof AppEventLog){
+                Random r = new Random();
+                //一行商品数
+                int o = r.nextInt(30);
+                StringBuilder sb = new StringBuilder();
+                for(int x = 1 ; x <= o+1 ; x++){
+                    //商品id
+                    int i = r.nextInt(300);
+                    DecimalFormat df = new DecimalFormat("0000");
+                    String productId = "p" + df.format(i);
+                    sb.append(productId + ",");
+                }
+
+                String productIds = sb.toString().substring(0,sb.length()-1);
+
+                ((AppEventLog) t1).setProductId(productIds);
+
+            }
+
+
+
             //如果是日志聚合体，则设置设备id
             if (t1 instanceof AppLogAggEntity) {
                 Random r = new Random();
@@ -61,7 +84,10 @@ public class GenLogUtil {
      */
     public static <T> List<T> genLogList(Class<T> clazz) {
         List<T> list = new ArrayList<T>();
-        list.add(genLog(clazz));
+        Random r = new Random();
+        for( int i = 0; i <= r.nextInt(3) + 1; i++){
+            list.add(genLog(clazz));
+        }
         return list;
     }
 

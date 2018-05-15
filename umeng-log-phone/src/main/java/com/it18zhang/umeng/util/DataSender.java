@@ -17,7 +17,7 @@ public class DataSender {
             String json = JSON.toJSONString(aggLog,false);
             doSend(json);
             System.out.println(json);
-            //Thread.sleep(3000);
+            Thread.sleep(1000);
 
         }
     }
@@ -29,7 +29,7 @@ public class DataSender {
     private static void doSend(String json) {
         try {
             //String strURL = "http://s202:8080/app-colllog/collector/agg";
-            String strURL = "http://s101:8089/index.html";
+            String strURL = "http://192.168.23.101:8089/index.html";
             URL url = new URL(strURL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             //设置请求方式

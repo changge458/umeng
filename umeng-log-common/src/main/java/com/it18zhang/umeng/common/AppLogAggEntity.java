@@ -6,7 +6,7 @@ import java.util.List;
  * App日志聚合体,phone端程序上报日志使用
  */
 public class AppLogAggEntity {
-	private String appId;                //应用唯一标识
+	//private String appId;                //应用唯一标识
 	private String tenantId;             //租户唯一标识,企业用户
 	private String deviceId;            //设备唯一标识
 	private String appVersion;            //版本
@@ -21,13 +21,13 @@ public class AppLogAggEntity {
 	private List<AppUsageLog> appUsageLogs;            //app使用情况相关信息的数组
 	private List<AppErrorLog> appErrorLogs;            //错误相关信息的数组
 
-	public String getAppId() {
-		return appId;
-	}
-
-	public void setAppId(String appId) {
-		this.appId = appId;
-	}
+//	public String getAppId() {
+//		return appId;
+//	}
+//
+//	public void setAppId(String appId) {
+//		this.appId = appId;
+//	}
 
 	public String getTenantId() {
 		return tenantId;
