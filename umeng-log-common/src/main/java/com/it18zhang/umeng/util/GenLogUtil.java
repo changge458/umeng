@@ -45,10 +45,8 @@ public class GenLogUtil {
                 StringBuilder sb = new StringBuilder();
                 for(int x = 1 ; x <= o+1 ; x++){
                     //商品id
-                    int i = r.nextInt(300);
-                    DecimalFormat df = new DecimalFormat("0000");
-                    String productId = "p" + df.format(i);
-                    sb.append(productId + ",");
+                    int i = r.nextInt(100);
+                    sb.append(i + ",");
                 }
 
                 String productIds = sb.toString().substring(0,sb.length()-1);

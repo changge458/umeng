@@ -17,7 +17,7 @@ public class DataSender {
             String json = JSON.toJSONString(aggLog,false);
             doSend(json);
             System.out.println(json);
-            Thread.sleep(1000);
+            Thread.sleep(500);
 
         }
     }
